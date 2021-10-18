@@ -8,12 +8,23 @@
     <meta name="description" content="Mr. Coffee is located on number 15 Jules Guesde place short walk from tram station ***">
     <link rel="stylesheet"  href="./application.css">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-    <link rel="icon" href="Assets/logo_dark.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="Assets/logo_dark.png" type="image/gif" sizes="16x16"><!--favicon-->
+    <script src="form.js" defer></script>
 </head>
-
+    
 <body>
+    <div class="modal-overlay"></div>
+    <dialog class= "modal">
+        <img div class="popup-icon" src="Assets/logo_dark.png">
+        <h2>Merci</h2><br>
+        <h3>Votre message a bien été envoyé !</h3><br>
+        <p>Nous essaierons d’y répondre au mieux dans les plus brefs
+        délais. À bientot chez Mr.Coffee</p>
+        <button id="close-modal">FERMER</button>
+    </dialog>
+    
 
-    <header> 
+    <header>   
        <nav>
             <img id="fullLogo" src="Assets/full_logo_white.png">
         <ul>    
@@ -26,6 +37,37 @@
 
     <img div class="top-logo" src="Assets/logo_mrcoffee.png">   
     
+    <section>
+        <h2>Dites nous tout !</h2>
+
+        <form id="contact-form">
+            <div>
+                <label for="name">Nom *</label><br>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="surname">Prénom *</label><br>
+                <input type="text" name="surname" id="surname" required>
+            </div>
+            <div>
+                <label for="phone">Téléphone</label><br>
+                <input type="tel" name="phone" id="phone" tel>
+            </div>
+            <div>
+                <label for="email">Adresse mail *</label><br>
+                <input type="email" name="email" id="email" placeholder="something@email.com" required email>
+            </div>
+            <div>
+                <label for="message">Message *</label><br>
+                <textarea name="message" id="message" placeholder="Tapez votre message ici" required ></textarea>
+            </div>
+
+            <button type="submit">ENVOYER</button>
+        </form>
+    </section>
+
+
+
     <div class="contact-central">
         <h2>On vous attend !</h2>
 
